@@ -3,6 +3,8 @@
 #include <cerrno>
 #include <system_error>
 
+/*** Terminal settings ***/
+
 // Enable raw mode on construction
 RawMode::RawMode() {
     if (tcgetattr(STDIN_FILENO, &orig_) == -1)

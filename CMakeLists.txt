@@ -8,6 +8,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(RafiText
     src/main.cpp
     src/terminal.cpp
+    src/editor.cpp
+    src/abuf.cpp
 )
 
 target_include_directories(RafiText PRIVATE src)

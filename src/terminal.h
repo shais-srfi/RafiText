@@ -1,7 +1,7 @@
 #pragma once
 #include <termios.h>
 
-// class to manage terminal raw mode
+// Manages terminal raw mode (RAII)
 class RawMode {
 public:
     RawMode();
