@@ -1,0 +1,9 @@
+build/
+
+*.o
+*.obj
+RafiText
+RafiText.exe
+
+.vscode/
+.DS_Store
