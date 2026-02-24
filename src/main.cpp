@@ -4,12 +4,15 @@
 #include <iostream>
 #include <system_error>
 
-int main() {
+int main(int argc, char *argv[]) {
     EditorConfig E;
 
     try {
         RawMode raw;
-        E.initEditor();
+        if (argc >= 2) {
+            E.editorOpen(argv[1]);
+        }
+        E.setStatusMessage("HELP: Ctrl-S = save | Ctrl-Q = quit | Ctrl-F = find");
         E.refreshScreen();
         while (E.processKeypress()) {
             E.refreshScreen();
